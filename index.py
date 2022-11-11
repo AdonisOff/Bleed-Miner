@@ -20,7 +20,8 @@ bot = commands.Bot(command_prefix=">", help_command=None, intents=intens)
 async def on_ready():
     print("[+] All working well")
     await bot.change_presence(satuts=discord.Status.online, activy=discord.game("Mining..."))
- @bot.command()
+    
+@bot.command()
 async def ping():
     pingtime = time.time()
     pingms = await bot.say("Pingping...")

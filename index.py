@@ -16,7 +16,10 @@ import settings
 intents = discord.intents.default()
 bot = commands.Bot(command_prefix=">", help_command=None, intents=intens)
 
-
+@bot.event
+async def on_ready():
+    print("[+] All working well")
+    await bot.change_pre
 
 
 def Spinner():

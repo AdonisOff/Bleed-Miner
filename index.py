@@ -11,7 +11,7 @@ from blessed import Terminal
 import discord
 from discord.ext import commands
 
-import settings
+
 
 intents = discord.intents.default()
 bot = commands.Bot(command_prefix=">", help_command=None, intents=intents)

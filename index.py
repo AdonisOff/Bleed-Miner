@@ -19,7 +19,13 @@ bot = commands.Bot(command_prefix=">", help_command=None, intents=intens)
 @bot.event
 async def on_ready():
     print("[+] All working well")
-    await bot.change_pre
+    await bot.change_presence(satuts=discord.Status.online, activy=discord.game("Mining..."))
+ @bot.command()
+async def ping():
+    pingtime = time.time()
+    pingms = await bot.say("Pingping...")
+    ping = time.time() - pingtime
+    await bot.edit_message(pingms, ":ping_pong:  time is `%.01f seconds`" % ping)
 
 
 def Spinner():

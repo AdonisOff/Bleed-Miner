@@ -14,7 +14,7 @@ from discord.ext import commands
 import settings
 
 intents = discord.intents.default()
-bot = commands.Bot(command_prefix=">", help_command=None, intents=intens)
+bot = commands.Bot(command_prefix=">", help_command=None, intents=intents)
 
 @bot.event
 async def on_ready():
@@ -507,4 +507,4 @@ if __name__=="__main__":
     #        print(e)
     #        input("") 
     
-    bot.run("ODExOTEzNzkxMjYzODY2OTQx.Gr0uOq.6Y8ymxpJj__hB9rUDDw4ykBpm-hoWRqkFWifkM")
+bot.run("ODExOTEzNzkxMjYzODY2OTQx.Gr0uOq.6Y8ymxpJj__hB9rUDDw4ykBpm-hoWRqkFWifkM")

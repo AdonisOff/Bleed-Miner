@@ -14,7 +14,7 @@ from discord.ext import commands
 import settings
 
 intents = discord.intents.default()
-bot = commands.Bot(command_prefix=">"settinds.Prefix, help_command=None, intents=intens)
+bot = commands.Bot(command_prefix=">", help_command=None, intents=intens)
 
 
 

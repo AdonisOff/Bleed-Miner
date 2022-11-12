@@ -13,8 +13,8 @@ logo = """
  '----------------' '----------------' '----------------' '----------------' '----------------'   '----------------' '----------------' '----------------' '----------------' '----------------' 
 """
 os.system("mode con cols=92 lines=52")
-os.system("title " + "Bleed Miner")
-class gayCode:
+os.system("title " + "Bleed Miner | discord.gg/bleed | t.me/bleedminer")
+class BleedCode:
    def __init__(self):
       print(Colorate.Horizontal(Colors.purple_to_red, Center.XCenter(logo)))
       print(f"\t\t\t     #{Col.white} Bleed")
@@ -112,4 +112,4 @@ class gayCode:
          sleep(1)
          print(f"{Col.white}[{Col.green}!{Col.white}]{Col.green} Successfully Sent {Col.white}{mo}.{mo2}$ {Col.green}To Your wallet !")
          input(f"{Col.white}[{Col.dark_red}!{Col.white}]{Col.dark_red} Press Enter to continue mining..")
-gayCode() # uwu
+BleedCode() # uwu

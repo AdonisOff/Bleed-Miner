@@ -13,6 +13,7 @@ logo = """
  '----------------' '----------------' '----------------' '----------------' '----------------'   '----------------' '----------------' '----------------' '----------------' '----------------' 
 """
 os.system("mode con cols=92 lines=52")
+System.size(1080, 1720)
 os.system("title " + "Bleed Miner | discord.gg/bleed | t.me/bleedminer")
 class BleedCode:
    def __init__(self):

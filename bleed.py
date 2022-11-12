@@ -13,7 +13,7 @@ logo = """
  '----------------' '----------------' '----------------' '----------------' '----------------'   '----------------' '----------------' '----------------' '----------------' '----------------' 
 """
 os.system("mode con cols=92 lines=52")
-os.system("title " + "Secret Miner || vesper#0003")
+os.system("title " + "Bleed Miner")
 class gayCode:
    def __init__(self):
       print(Colorate.Horizontal(Colors.purple_to_red, Center.XCenter(logo)))

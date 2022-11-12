@@ -1,2 +1,0 @@
-# Bleed-Miner
-Bleed Dev
